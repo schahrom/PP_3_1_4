@@ -72,7 +72,9 @@ public class UserService implements UserDetailsService {
     }
 
     public void update(User user) {
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        if (!user.getPassword().equals(findUserById(user.getId()).getPassword())) {
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
+        }
         userRepository.saveAndFlush(user);
     }
 

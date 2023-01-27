@@ -13,6 +13,11 @@ window.addEventListener('DOMContentLoaded', getAllUser);
 
 function usersToHTML({ id, username, lastName, age, email, roles }) {
     const tbody = document.getElementById('data');
+    let strRole = '';
+
+    roles.forEach((role) => {
+        strRole += role.name.substring(5) + ' ';
+    })
 
     tbody.insertAdjacentHTML('beforeend', `
     <tr id="user${id}" >
@@ -21,7 +26,7 @@ function usersToHTML({ id, username, lastName, age, email, roles }) {
         <td>${lastName}</td>
         <td>${age}</td>
         <td>${email}</td>
-        <td>${roles.name}</td>
+        <td>${strRole}</td>
         <td>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-info editBtn" data-toggle="modal"

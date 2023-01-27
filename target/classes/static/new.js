@@ -18,9 +18,9 @@ async function showRole() {
 
 document.getElementById('profile-tab').addEventListener('click', showRole)
 
+document.getElementById('addNewUser').addEventListener('click', createUser)
 
-
-$("#addNewUser").on('click', async () => {
+async function createUser() {
     const inputUsername = document.getElementById('nUsername');
     const inputLastName = document.getElementById('nLastName');
     const inputAge = document.getElementById('nAge');
@@ -34,11 +34,11 @@ $("#addNewUser").on('click', async () => {
     const email = inputEmail.value;
     const password = inputPassword.value;
     let listRoles = roleArray(document.getElementById('nRoles'));
-    console.log({ username, lastName, age, email, password, roles: listRoles })
+   
 
-    if (username && lastName && age && email && password) {
+    if (username && lastName && age && email && password && (listRoles.length != 0)) {
 
-        const res = await fetch("http://localhost:8080/api/users", {
+        let res = await fetch("http://localhost:8080/api/users", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -46,14 +46,16 @@ $("#addNewUser").on('click', async () => {
             body: JSON.stringify({ username, lastName, age, email, password, roles: listRoles })
         });
         const result = await res.json();
+        addUserInTable(result);
+    }
 
         inputUsername.value = ''
         inputLastName.value = ''
         inputAge.value = ''
         inputEmail.value =''
         inputPassword.value = ''
-    }
-})
+
+}
 
 
 
@@ -74,7 +76,50 @@ let roleArray = (options) => {
 }
 
 
+async function addUserInTable(result) {
+    const id = result.id;
+    console.log('hi');
+    const res = await fetch(`http://localhost:8080/api/users/${id}`);
+    const user = await res.json();
 
+    let strRoles = '';
+
+    user.roles.forEach((role) => {
+        strRoles += role.name.substring(5) + ' ';
+    })
+
+
+
+    const tbody = document.getElementById('data');
+
+    tbody.insertAdjacentHTML('beforeend', `
+    <tr id="user${user.id}" >
+        <td>${user.id}</td>
+        <td>${user.username}</td>
+        <td>${user.lastName}</td>
+        <td>${user.age}</td>
+        <td>${user.email}</td>
+        <td>${strRoles}</td>
+        <td>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-info editBtn" data-toggle="modal"
+                    data-target="#editModal"
+                    onclick="editUserData(${user.id})">
+                Edit
+            </button>
+        </td>
+        <td>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-danger"
+                    data-toggle="modal"
+                    data-target="#deleteModal"
+                    onclick="deleteUserData(${user.id})">
+                Delete
+            </button>
+        </td>
+    </tr>`)
+
+}
 
 
 

@@ -5,21 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2527cebd-5d1b-4bdb-b50f-e3f813e132fd" name="Changes" comment="&quot;First commit&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e8449314-ddff-4f50-b963-cfe39b2a327f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e8449314-ddff-4f50-b963-cfe39b2a327f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/configs/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/configs/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/controller/springRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/controller/springRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/delete.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/new.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/new.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/show.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/show.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/configs/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/configs/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/controller/springRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/controller/springRestController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/util/InitClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/util/InitClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/delete.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/new.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/new.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/show.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/show.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +122,7 @@
       <workItem from="1674627242667" duration="15002000" />
       <workItem from="1674668060672" duration="5316000" />
       <workItem from="1674718390519" duration="9482000" />
-      <workItem from="1674788146084" duration="7456000" />
+      <workItem from="1674788146084" duration="14550000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;First commit&quot;">
       <created>1674490806677</created>
@@ -126,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674490806677</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;First commit&quot;">
+      <created>1674805932898</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674805932898</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

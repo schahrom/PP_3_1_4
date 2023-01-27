@@ -7,6 +7,13 @@ async function deleteUserData(id) {
             $('.myDeleteForm #dLastName').val(user.lastName);
             $('.myDeleteForm #dAge').val(user.age);
             $('.myDeleteForm #dEmail').val(user.email);
+            const inputRoles = document.getElementById('dRoles');
+
+
+            inputRoles.innerHTML = `
+        <option value="${dbRoles[0].id}" name="ROLE_ADMIN" >${dbRoles[0].name}</option>
+        <option value="${dbRoles[1].id}" name="ROLE_USER" >${dbRoles[1].name}</option>
+        `
         })
 
     
@@ -19,5 +26,13 @@ async function deleteUserData(id) {
             }
         });
         document.getElementById(`user${id}`).remove();
+
+
+        $('#deleteModal').modal('toggle');
+
     })
+
+    // $('.myDeleteForm #deleteModal').modal();
+    // $('.myDeleteForm #deleteModal').close();
+   
 }

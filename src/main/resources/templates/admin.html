@@ -17,10 +17,7 @@
     <div class="col-12">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-12 p-2 bg-dark text-white ">
-                    <a th:text="*{admin.email}" class="font-weight-bold text-white" id="headerUsername"></a>
-                    <a> with roles:</a>
-                    <a th:text="*{admin.roles}" id="headerRoles"></a>
+                <div class="col-sm-12 p-2 bg-dark text-white " id="headerUsername">
                     <a th:href="@{/logout}" class="float-right text-secondary"> Logout </a>
                 </div>
             </div>
@@ -165,7 +162,7 @@
                                                             <button type="button" class="btn btn-secondary"
                                                                     data-dismiss="modal">Close
                                                             </button>
-                                                            <button type="submit" id="edit-user-button"
+                                                            <button type="button" id="edit-user-button"
                                                                     class="btn btn-primary">Edit
                                                             </button>
                                                         </div>
@@ -248,7 +245,7 @@
                                                             <button type="button" class="btn btn-secondary"
                                                                     data-dismiss="modal">Close
                                                             </button>
-                                                            <button type="submit" class="btn btn-danger"
+                                                            <button type="button" class="btn btn-danger"
                                                                     id="delete-user-button">Delete
                                                             </button>
                                                         </div>
@@ -321,7 +318,7 @@
                                             </select>
                                         </div>
                                         <div class="row">
-                                            <button type="submit" class="btn btn-success" id="addNewUser"
+                                            <button type="button" class="btn btn-success" id="addNewUser"
                                                     style="margin: auto">Add new user
                                             </button>
                                         </div>
@@ -350,15 +347,7 @@
                                         <th scope="col">Role</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td th:text="${admin.id}"/>
-                                        <td th:text="${admin.getUsername()}"/>
-                                        <td th:text="${admin.getLastName()}"/>
-                                        <td th:text="${admin.age}"/>
-                                        <td th:text="${admin.getEmail()}"/>
-                                        <td th:text="${admin.getRoles()}"/>
-                                    </tr>
+                                    <tbody id="tbodyUserTable">
                                     </tbody>
                                 </table>
                             </div>
@@ -386,5 +375,6 @@
 <script type="text/javascript" src="../static/edit.js" th:src="@{/edit.js}"></script>
 <script type="text/javascript" src="../static/edit.js" th:src="@{/delete.js}"></script>
 <script type="text/javascript" src="../static/new.js" th:src="@{/new.js}"></script>
+<script type="text/javascript" src="../static/otherInfo.js" th:src="@{/otherInfo.js}"></script>
 </body>
 </html>
